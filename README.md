@@ -1,23 +1,28 @@
-# Changelens privacy site
+# Changelens for JIRA — Privacy Policy
 
-A standalone, dependency-free privacy policy page for the **Changelens for JIRA**
-Chrome extension. Kept in its own folder so it can be published as a small
-**public** repo via GitHub Pages without exposing the extension's source.
+This repository hosts the privacy policy for the **Changelens for JIRA** browser
+extension. It exists solely to publish that policy as a stable public page.
 
-`index.html` is self-contained: no external fonts, scripts, or CDN calls (fitting
-for a privacy page). It mirrors the canonical policy in the main repo's
-`PRIVACY.md` — keep the two in sync if either changes.
+📄 **Live policy:** https://<your-user>.github.io/changelens-privacy/
 
-## Publish (GitHub Pages)
+## About the extension
 
-1. Create a new **public** repo, e.g. `changelens-privacy`.
-2. Copy the contents of this folder (`index.html`, this `README.md`) into it.
-3. Push to `main`.
-4. Repo → **Settings → Pages** → Source: **Deploy from a branch**, Branch:
-   `main` / `/ (root)` → **Save**.
-5. After a minute, the page is live at:
-   `https://<your-user>.github.io/changelens-privacy/`
-6. Use that URL in the Chrome Web Store dashboard's **Privacy policy URL** field.
+Changelens for JIRA shows readable, attributed diffs of JIRA Cloud ticket
+changes — what changed, who changed it, and what's new since you last viewed a
+ticket. It runs entirely in your browser using your existing JIRA login.
+
+**It does not collect, transmit, sell, or share any data.** All processing is
+local; there is no Changelens server, no analytics, and no third-party sharing.
+See the [full policy](index.html) for details.
+
+## How it's published
+
+`index.html` is a single, self-contained page (no external fonts, scripts, or
+CDN calls) served via **GitHub Pages** from this repo's `main` branch.
+
+To enable Pages after pushing: **Settings → Pages → Source: Deploy from a
+branch → `main` / `/ (root)`**. The page goes live at the URL above within a
+minute or so.
 
 ## Local preview
 
