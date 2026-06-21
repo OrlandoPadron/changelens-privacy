@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy Policy — Changelens for JIRA</title>
+    <meta
+      name="description"
+      content="Privacy policy for the Changelens for JIRA browser extension. No data collected, transmitted, or shared — all processing is local."
+    />
+    <style>
+      :root {
+        --indigo: #4f46e5;
+        --ink: #1f2430;
+        --muted: #5b6472;
+        --bg: #ffffff;
+        --card: #f7f8fb;
+        --border: #e6e8ef;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --indigo: #8b87ff;
+          --ink: #e8eaf0;
+          --muted: #a4abba;
+          --bg: #15171c;
+          --card: #1d2027;
+          --border: #2a2e38;
+        }
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font:
+          16px/1.65 system-ui,
+          -apple-system,
+          Segoe UI,
+          Roboto,
+          Helvetica,
+          Arial,
+          sans-serif;
+      }
+      main {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 48px 24px 80px;
+      }
+      header {
+        border-bottom: 1px solid var(--border);
+        padding-bottom: 20px;
+        margin-bottom: 8px;
+      }
+      h1 {
+        font-size: 1.9rem;
+        margin: 0 0 6px;
+        letter-spacing: -0.01em;
+      }
+      h1 .brand {
+        color: var(--indigo);
+      }
+      h2 {
+        font-size: 1.25rem;
+        margin: 36px 0 10px;
+        letter-spacing: -0.01em;
+      }
+      .updated {
+        color: var(--muted);
+        font-size: 0.9rem;
+        margin: 0;
+      }
+      .lead {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-left: 4px solid var(--indigo);
+        border-radius: 4px;
+        padding: 16px 18px;
+        margin: 24px 0;
+      }
+      a {
+        color: var(--indigo);
+      }
+      code {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: 5px;
+        padding: 1px 6px;
+        font-size: 0.88em;
+      }
+      ul {
+        padding-left: 22px;
+      }
+      li {
+        margin: 6px 0;
+      }
+      footer {
+        margin-top: 48px;
+        padding-top: 20px;
+        border-top: 1px solid var(--border);
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Privacy Policy — <span class="brand">Changelens for JIRA</span></h1>
+        <p class="updated">Last updated: 2026-06-21</p>
+      </header>
+
+      <p>
+        Changelens for JIRA (“the extension”) is a browser extension that shows readable, attributed
+        diffs of JIRA Cloud ticket changes. This policy explains what the extension does and does
+        not do with your data.
+      </p>
+
+      <div class="lead">
+        <strong>Changelens does not collect, transmit, sell, or share any of your data.</strong> All
+        processing happens locally in your browser. There is no Changelens server, no analytics, and
+        no third-party data sharing.
+      </div>
+
+      <h2>What the extension accesses</h2>
+      <p>
+        When you open a JIRA Cloud ticket (a page on
+        <code>*.atlassian.net</code>), the extension runs in that page and reads ticket data
+        <strong>using your existing JIRA login</strong> (your browser's session cookies). It does
+        not use, request, or store any API tokens, passwords, or OAuth credentials.
+      </p>
+      <p>Specifically, it reads from your own JIRA instance's API:</p>
+      <ul>
+        <li>
+          The issue <strong>changelog</strong> (field change history) for the ticket you're viewing.
+        </li>
+        <li>The ticket's <strong>comments</strong>.</li>
+        <li>
+          The ticket's <strong>creation date and reporter</strong> (for the Time Machine's
+          “original” label).
+        </li>
+        <li>
+          Your own <strong>account ID</strong> (to optionally distinguish your edits from others').
+        </li>
+      </ul>
+      <p>
+        This is the same data already visible to you in JIRA. The extension only ever requests it
+        from the JIRA site you are already logged into, and only for the ticket you are actively
+        viewing.
+      </p>
+
+      <h2>What the extension stores</h2>
+      <p>
+        The extension stores a small amount of data <strong>locally on your device only</strong>,
+        using the browser's <code>chrome.storage.local</code>:
+      </p>
+      <ul>
+        <li>
+          <strong>“Last viewed” timestamps</strong> per ticket, used to highlight what changed since
+          you last looked.
+        </li>
+        <li>
+          <strong>Display preferences</strong> (e.g. Time Machine step size and “show changes”
+          toggle).
+        </li>
+      </ul>
+      <p>
+        This data never leaves your browser. It is not synced to any server. Uninstalling the
+        extension removes it.
+      </p>
+
+      <h2>What the extension does NOT do</h2>
+      <ul>
+        <li>
+          It does <strong>not</strong> send your data anywhere outside your own JIRA instance.
+        </li>
+        <li>It does <strong>not</strong> include any analytics, tracking, or telemetry.</li>
+        <li>
+          It does <strong>not</strong> read pages other than JIRA Cloud
+          (<code>*.atlassian.net</code>).
+        </li>
+        <li>It does <strong>not</strong> collect personal information for the developer.</li>
+      </ul>
+
+      <h2>Permissions</h2>
+      <ul>
+        <li>
+          <code>storage</code> — to save your “last viewed” timestamps and display preferences
+          locally (see above).
+        </li>
+        <li>
+          Host access to <code>https://*.atlassian.net/*</code> — so the extension can run on JIRA
+          Cloud tickets and read their change history using your existing session.
+        </li>
+      </ul>
+
+      <h2>Changes to this policy</h2>
+      <p>
+        If this policy changes, the “Last updated” date above will change and the new version will
+        be published at the same location.
+      </p>
+      <footer>Changelens for JIRA — Privacy policy.</footer>
+    </main>
+  </body>
+</html>
