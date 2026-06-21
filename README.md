@@ -3,7 +3,7 @@
 This repository hosts the privacy policy for the **Changelens for JIRA** browser
 extension. It exists solely to publish that policy as a stable public page.
 
-📄 **Live policy:** https://<your-user>.github.io/changelens-privacy/
+📄 **Live policy:** [https://orlandopadron.github.io/changelens-privacy/](https://orlandopadron.github.io/changelens-privacy/)
 
 ## About the extension
 
